@@ -1,4 +1,4 @@
-hp-dashboard
+HackPrinceton Dashboard
 ============
 
 HackPrinceton's real-time event dashboard for use during the hackathon.
