@@ -5,15 +5,16 @@
  */
 
 body {
-	margin-top: 50px;
-	margin-bottom: 50px;
-	background: none;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    background: none;
 }
-
 .full {
-  background: url(http://placehold.it/1920x1080) no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+    background: url('../img/background.png') no-repeat left top fixed;
+    /*background: url('../img/blue.jpg') no-repeat center center fixed;*/
+    /* http://wallpaperswide.com/blue_texture_2-wallpapers.html */
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }

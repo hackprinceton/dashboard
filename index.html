@@ -21,6 +21,9 @@
     <!-- Countdown JS -->
     <script src="countdown.js"></script>
 
+    <!-- FontAWESOME! -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -47,15 +50,18 @@
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav">
+                <ul class="nav navbar-nav" id="nav-tabs">
                     <li>
-                        <a href="#">About</a>
+                        <a href="#calendar" data-url="embed/calendar.html">Calendar</a>
                     </li>
-                    <li>
-                        <a href="#">Services</a>
+                    <li class="active">
+                        <a href="#transportation" data-url="embed/transportation.html">Travel Info</a>
                     </li>
                     <li>
                         <a href="#">Contact</a>
+                    </li>
+                    <li>
+                        <a href="#credits" data-url="embed/site-credits.html">Site Credits</a>
                     </li>
                 </ul>
             </div>
@@ -67,10 +73,10 @@
     <!-- Page Content -->
     <div class="container">
         <div class="row">
-            <div class="col-md-6 col-sm-12">
+            <div class="col-md-5 col-sm-12">
                 <h1><img alt="HackPrinceton Logo" src="img/logo.png" height="50px"> DASHBOARD</h1>
 
-                <div class="panel">
+                <div class="panel panel-default">
                     <div class="panel-heading">
                         <h3 class="panel-title">EVENT INFO</h3>
                     </div>
@@ -79,10 +85,10 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-6 col-sm-6">
+            <div class="col-md-7 col-sm-6">
                 <!-- Countdown Timer -->
                 <div class="hidden-sm hidden-xs" style="float: right">
-                    <h5>TIME TO KICKOFF:</h5>
+                    <h5 style="/*color: #FCFBFB;*/ color: #000;">TIME TO KICKOFF:</h5>
                     <script type="application/javascript">
                         var hackPrincetonStartCountdown = new Countdown({
                             year: 2014,
@@ -109,8 +115,8 @@
                             },
                             labels: {
                                 font: "Arial",
-                                color: "#a8a8a8",
-                                weight: "normal" // < - no comma on last item!
+                                color: "#000000",
+                                weight: "normal"
                             }
                         });
                     </script>
@@ -119,7 +125,13 @@
                 <!-- margin -->
                 <div class="hidden-sm hidden-xs" style="margin-bottom: 110px"></div>
 
-                <div class="panel">
+                <div class="tab-content">
+                    <div class="tab-pane" id="calendar"></div>
+                    <div class="tab-pane active" id="transportation"></div>
+                    <div class="tab-pane" id="credits"></div>
+                </div>
+
+                <div class="panel panel-default">
                     <div class="panel-heading">
                         <h3 class="panel-title">CALENDAR</h3>
                     </div>
@@ -138,6 +150,26 @@
 
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
+
+    <script type="application/javascript">
+        $('#nav-tabs a').click(function (e) {
+            e.preventDefault();
+
+            var url = $(this).attr("data-url");
+            var href = this.hash;
+            var pane = $(this);
+
+            // ajax load from data-url
+            $(href).load(url, function (result) {
+                pane.tab('show');
+            });
+        });
+
+         // load first tab content
+        $('#transportation').load($('.active a').attr("data-url"), function (result) {
+            //$('.active a').tab('show');
+        });
+    </script>
 
 </body>
 
