@@ -36,7 +36,7 @@
 <body>
 
     <!-- Navigation -->
-    <nav class="navbar navbar-inverse navbar-fixed-bottom" role="navigation">
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
         <div class="container">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
@@ -52,13 +52,22 @@
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav" id="nav-tabs">
                     <li>
-                        <a href="#calendar" data-url="embed/calendar.html">Calendar</a>
+                        <a href="#schedule" data-url="embed/schedule.html">Schedule</a>
+                    </li>
+                    <li>
+                        <a href="#maps" data-url="embed/map.html">Maps</a>
                     </li>
                     <li class="active">
                         <a href="#transportation" data-url="embed/transportation.html">Travel Info</a>
                     </li>
                     <li>
-                        <a href="#">Contact</a>
+                        <a href="#faqs" data-url="embed/faqs.html">FAQs</a>
+                    </li>
+                    <li>
+                        <a href="#prizes" data-url="embed/prizes.html">Prizes</a>
+                    </li>
+                    <li>
+                        <a href="#hardware-api" data-url="embed/hardware-api.html">Hardware/APIs</a>
                     </li>
                     <li>
                         <a href="#credits" data-url="embed/site-credits.html">Site Credits</a>
@@ -81,7 +90,22 @@
                         <h3 class="panel-title">EVENT INFO</h3>
                     </div>
                     <div class="panel-body">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni, iusto, unde, sunt incidunt id sapiente rerum soluta voluptate harum veniam fuga odit ea pariatur vel eaque sint sequi tenetur eligendi.
+                        <p><strong>Realize your PAWtential this upcoming November.</strong>
+                        </p>
+
+                        <a class="twitter-timeline" href="https://twitter.com/HackPrinceton" data-widget-id="523629538417197056">Tweets by @HackPrinceton</a> 
+                        <script>
+                            ! function (d, s, id) {
+                                var js, fjs = d.getElementsByTagName(s)[0],
+                                    p = /^http:/.test(d.location) ? 'http' : 'https';
+                                if (!d.getElementById(id)) {
+                                    js = d.createElement(s);
+                                    js.id = id;
+                                    js.src = p + "://platform.twitter.com/widgets.js";
+                                    fjs.parentNode.insertBefore(js, fjs);
+                                }
+                            }(document, "script", "twitter-wjs");
+                        </script>
                     </div>
                 </div>
             </div>
@@ -125,19 +149,24 @@
                 <!-- margin -->
                 <div class="hidden-sm hidden-xs" style="margin-bottom: 110px"></div>
 
-                <div class="tab-content">
-                    <div class="tab-pane" id="calendar"></div>
-                    <div class="tab-pane active" id="transportation"></div>
-                    <div class="tab-pane" id="credits"></div>
+                <div class="panel panel-default">
+                    <div class="panel-body" style="text-align: center">
+                        <strong>Wifi</strong>: puvisitor &#8226; <strong>Princeton University Public Safety</strong>: (609) 258-1000
+
+                        <br>
+
+                        <strong>Help</strong>: <a href="mailto:hackprinceton@princetoneclub.com">hackprinceton@princetoneclub.com</a>
+                    </div>
                 </div>
 
-                <div class="panel panel-default">
-                    <div class="panel-heading">
-                        <h3 class="panel-title">CALENDAR</h3>
-                    </div>
-                    <div class="panel-body">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni, iusto, unde, sunt incidunt id sapiente rerum soluta voluptate harum veniam fuga odit ea pariatur vel eaque sint sequi tenetur eligendi.
-                    </div>
+                <div class="tab-content">
+                    <div class="tab-pane" id="schedule"></div>
+                    <div class="tab-pane" id="maps"></div>
+                    <div class="tab-pane active" id="transportation"></div>
+                    <div class="tab-pane" id="faqs"></div>
+                    <div class="tab-pane" id="prizes"></div>
+                    <div class="tab-pane" id="hardware-api"></div>
+                    <div class="tab-pane" id="credits"></div>
                 </div>
             </div>
         </div>
