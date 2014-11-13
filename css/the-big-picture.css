@@ -18,7 +18,12 @@ body {
     -o-background-size: cover;
     background-size: cover;
 }
-
 #panel-bus {
     color: #333;
+}
+header > h1 {
+    display: inline-block;
+}
+header span {
+    margin-left: 3px;
 }
