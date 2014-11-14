@@ -77,9 +77,6 @@
                     <li>
                         <a href="#hardware-api" data-url="embed/hardware-api.html">Hardware</a>
                     </li>
-                    <li>
-                        <a href="#credits" data-url="embed/site-credits.html">Site Credits</a>
-                    </li>
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
@@ -189,42 +186,46 @@
                     <!--<div class="tab-pane" id="faqs"></div>-->
                     <div class="tab-pane" id="prizes"></div>
                     <div class="tab-pane" id="hardware-api"></div>
-                    <div class="tab-pane" id="credits"></div>
                 </div>
 
                 <div style="text-align: right">Built w/ love by Alex Yue
-                    <br>and Zachary Liu</div>
+                    <br>and Zachary Liu
+
+                    <br>
+                    <div style="font-size:7px">Background vector designed by <a href="http://www.freepik.com/free-photos-vectors/background">Freepik</div>
+                    </a>
+                    </div>
+                </div>
             </div>
+            <!-- /.row -->
         </div>
-        <!-- /.row -->
-    </div>
-    <!-- /.container -->
+        <!-- /.container -->
 
-    <!-- jQuery Version 1.11.0 -->
-    <script src="js/jquery-1.11.0.js"></script>
+        <!-- jQuery Version 1.11.0 -->
+        <script src="js/jquery-1.11.0.js"></script>
 
-    <!-- Bootstrap Core JavaScript -->
-    <script src="js/bootstrap.min.js"></script>
+        <!-- Bootstrap Core JavaScript -->
+        <script src="js/bootstrap.min.js"></script>
 
-    <script type="application/javascript">
-        $('#nav-tabs a').click(function (e) {
-            e.preventDefault();
+        <script type="application/javascript">
+            $('#nav-tabs a').click(function (e) {
+                e.preventDefault();
 
-            var url = $(this).attr("data-url");
-            var href = this.hash;
-            var pane = $(this);
+                var url = $(this).attr("data-url");
+                var href = this.hash;
+                var pane = $(this);
 
-            // ajax load from data-url
-            $(href).load(url, function (result) {
-                pane.tab('show');
+                // ajax load from data-url
+                $(href).load(url, function (result) {
+                    pane.tab('show');
+                });
             });
-        });
 
-         // load first tab content
-        $('#transportation').load($('.active a').attr("data-url"), function (result) {
-            //$('.active a').tab('show');
-        });
-    </script>
+             // load first tab content
+            $('#transportation').load($('.active a').attr("data-url"), function (result) {
+                //$('.active a').tab('show');
+            });
+        </script>
 
 </body>
 
