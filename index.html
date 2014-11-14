@@ -192,40 +192,41 @@
                     <br>and Zachary Liu
 
                     <br>
-                    <div style="font-size:7px">Background vector designed by <a href="http://www.freepik.com/free-photos-vectors/background">Freepik</div>
-                    </a>
+                    <div style="font-size:7px">Background vector designed by <a href="http://www.freepik.com/free-photos-vectors/background">Freepik</a>
                     </div>
+
                 </div>
             </div>
-            <!-- /.row -->
         </div>
-        <!-- /.container -->
+        <!-- /.row -->
+    </div>
+    <!-- /.container -->
 
-        <!-- jQuery Version 1.11.0 -->
-        <script src="js/jquery-1.11.0.js"></script>
+    <!-- jQuery Version 1.11.0 -->
+    <script src="js/jquery-1.11.0.js"></script>
 
-        <!-- Bootstrap Core JavaScript -->
-        <script src="js/bootstrap.min.js"></script>
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
 
-        <script type="application/javascript">
-            $('#nav-tabs a').click(function (e) {
-                e.preventDefault();
+    <script type="application/javascript">
+        $('#nav-tabs a').click(function (e) {
+            e.preventDefault();
 
-                var url = $(this).attr("data-url");
-                var href = this.hash;
-                var pane = $(this);
+            var url = $(this).attr("data-url");
+            var href = this.hash;
+            var pane = $(this);
 
-                // ajax load from data-url
-                $(href).load(url, function (result) {
-                    pane.tab('show');
-                });
+            // ajax load from data-url
+            $(href).load(url, function (result) {
+                pane.tab('show');
             });
+        });
 
-             // load first tab content
-            $('#transportation').load($('.active a').attr("data-url"), function (result) {
-                //$('.active a').tab('show');
-            });
-        </script>
+         // load first tab content
+        $('#transportation').load($('.active a').attr("data-url"), function (result) {
+            //$('.active a').tab('show');
+        });
+    </script>
 
 </body>
 
