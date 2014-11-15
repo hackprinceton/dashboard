@@ -56,7 +56,7 @@
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav" id="nav-tabs">
-                    <li class="active">
+                    <li>
                         <a href="#schedule" data-url="embed/schedule.html">Schedule</a>
                     </li>
                     <li>
@@ -79,6 +79,9 @@
                     </li>
                     <li>
                         <a href="#companies" data-url="embed/companies.html">Companies</a>
+                    </li>
+                    <li class="active">
+                        <a href="#mentors" data-url="embed/mentor.html">Mentor Request</a>
                     </li>
                 </ul>
             </div>
@@ -133,6 +136,7 @@
                     </div>
                 </div>
             </div>
+
             <div class="col-md-7 col-sm-6">
                 <!-- Countdown Timer -->
                 <a href="http://infosys.com/" target="_blank">
@@ -189,7 +193,7 @@
                 </div>
 
                 <div class="tab-content">
-                    <div class="tab-pane active" id="schedule"></div>
+                    <div class="tab-pane" id="schedule"></div>
                     <div class="tab-pane" id="api"></div>
                     <div class="tab-pane" id="maps"></div>
                     <div class="tab-pane" id="transportation"></div>
@@ -197,6 +201,7 @@
                     <div class="tab-pane" id="prizes"></div>
                     <div class="tab-pane" id="hardware-api"></div>
                     <div class="tab-pane" id="companies"></div>
+                    <div class="tab-pane active" id="mentors"></div>
                 </div>
 
                 <div style="text-align: right">Built w/ love by Alex Yue
@@ -234,7 +239,7 @@
         });
 
          // load first tab content
-        $('#schedule').load($('.active a').attr("data-url"), function (result) {
+        $('#mentors').load($('.active a').attr("data-url"), function (result) {
             //$('.active a').tab('show');
         });
     </script>
