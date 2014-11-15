@@ -56,10 +56,10 @@
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav" id="nav-tabs">
-                    <li>
+                    <li class="active">
                         <a href="#schedule" data-url="embed/schedule.html">Schedule</a>
                     </li>
-                    <li class="active">
+                    <li>
                         <a href="#api" data-url="embed/api-talks.html">API Talks</a>
                     </li>
                     <li>
@@ -182,8 +182,8 @@
                 </div>
 
                 <div class="tab-content">
-                    <div class="tab-pane" id="schedule"></div>
-                    <div class="tab-pane active" id="api"></div>
+                    <div class="tab-pane active" id="schedule"></div>
+                    <div class="tab-pane" id="api"></div>
                     <div class="tab-pane" id="maps"></div>
                     <div class="tab-pane" id="transportation"></div>
                     <!--<div class="tab-pane" id="faqs"></div>-->
@@ -227,7 +227,7 @@
         });
 
          // load first tab content
-        $('#api').load($('.active a').attr("data-url"), function (result) {
+        $('#schedule').load($('.active a').attr("data-url"), function (result) {
             //$('.active a').tab('show');
         });
     </script>
