@@ -59,13 +59,13 @@
                     <li>
                         <a href="#schedule" data-url="embed/schedule.html">Schedule</a>
                     </li>
-                    <li>
+                    <li class="active">
                         <a href="#api" data-url="embed/api-talks.html">API Talks</a>
                     </li>
                     <li>
                         <a href="#maps" data-url="embed/map.html">Maps</a>
                     </li>
-                    <li class="active">
+                    <li>
                         <a href="#transportation" data-url="embed/transportation.html">Travel Info</a>
                     </li>
                     <!--<li>
@@ -180,9 +180,9 @@
 
                 <div class="tab-content">
                     <div class="tab-pane" id="schedule"></div>
+                    <div class="tab-pane active" id="api"></div>
                     <div class="tab-pane" id="maps"></div>
-                    <div class="tab-pane" id="api"></div>
-                    <div class="tab-pane active" id="transportation"></div>
+                    <div class="tab-pane" id="transportation"></div>
                     <!--<div class="tab-pane" id="faqs"></div>-->
                     <div class="tab-pane" id="prizes"></div>
                     <div class="tab-pane" id="hardware-api"></div>
@@ -223,7 +223,7 @@
         });
 
          // load first tab content
-        $('#transportation').load($('.active a').attr("data-url"), function (result) {
+        $('#api').load($('.active a').attr("data-url"), function (result) {
             //$('.active a').tab('show');
         });
     </script>
